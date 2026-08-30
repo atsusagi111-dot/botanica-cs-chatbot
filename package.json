@@ -1,0 +1,19 @@
+{
+  "name": "botanica-cs-chatbot",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:widget": "npm run dev -w apps/widget",
+    "dev:admin": "npm run dev -w apps/admin",
+    "build": "npm run build -ws --if-present",
+    "typecheck": "npm run typecheck -ws --if-present",
+    "seed:faqs": "node scripts/seed-faqs.mjs"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.4"
+  }
+}

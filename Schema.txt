@@ -1,0 +1,30 @@
+-- 会話セッション
+CREATE TABLE conversations (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  customer_session_id TEXT NOT NULL,        -- 匿名顧客の識別
+  status TEXT DEFAULT 'ai_handling',
+    -- ai_handling / waiting_operator / operator_handling / closed
+  assigned_operator_id UUID REFERENCES auth.users(id),
+  category TEXT,                             -- 在庫 / 配送 / 返品 / 商品 / その他
+  created_at TIMESTAMPTZ DEFAULT NOW()
+);
+
+-- メッセージ
+CREATE TABLE messages (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  conversation_id UUID REFERENCES conversations(id) ON DELETE CASCADE,
+  sender_type TEXT NOT NULL,                 -- customer / ai / operator
+  sender_id UUID,                            -- operator の場合のみ
+  content TEXT NOT NULL,
+  created_at TIMESTAMPTZ DEFAULT NOW()
+);
+
+-- FAQ ナレッジ（AI が参照）
+CREATE TABLE faqs (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  category TEXT NOT NULL,
+  question TEXT NOT NULL,
+  answer TEXT NOT NULL,
+  embedding VECTOR(1536),                    -- 検索用
+  created_at TIMESTAMPTZ DEFAULT NOW()
+);
