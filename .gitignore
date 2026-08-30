@@ -1,5 +1,6 @@
 node_modules/
 dist/
+dist-embed/
 .next/
 build/
 .env
@@ -7,7 +8,7 @@ build/
 .env.*.local
 *.log
 .DS_Store
-.claude/scheduled_tasks.lock
+.claude/
 .vercel/
 supabase/.temp/
 supabase/.branches/
