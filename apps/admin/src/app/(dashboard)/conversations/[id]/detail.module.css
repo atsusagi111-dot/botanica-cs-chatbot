@@ -1,0 +1,248 @@
+.backLink {
+  display: inline-block;
+  margin-bottom: 12px;
+  font-size: 13px;
+  color: var(--color-text-muted);
+  text-decoration: none;
+}
+
+.backLink:hover {
+  color: var(--color-text);
+}
+
+.infoPanel {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  margin-bottom: 16px;
+}
+
+.infoItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+}
+
+.infoLabel {
+  color: var(--color-text-muted);
+}
+
+.badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.statusAiHandling {
+  background: #e6eef8;
+  color: #2c5aa0;
+}
+
+.statusWaitingOperator {
+  background: var(--color-warning-bg);
+  color: var(--color-warning-text);
+}
+
+.statusOperatorHandling {
+  background: var(--botanica-green-light);
+  color: var(--botanica-green-dark);
+}
+
+.statusClosed {
+  background: #eceeec;
+  color: var(--color-text-muted);
+}
+
+.escalationBadge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  background: var(--color-danger-bg);
+  color: var(--color-danger);
+}
+
+.spacer {
+  flex: 1;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.actionButton {
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: 1px solid var(--botanica-green);
+  background: #fff;
+  color: var(--botanica-green);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.actionButton:hover {
+  background: var(--botanica-green-light);
+}
+
+.actionButtonPrimary {
+  background: var(--botanica-green);
+  color: #fff;
+}
+
+.actionButtonPrimary:hover {
+  background: var(--botanica-green-dark);
+}
+
+.actionButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.messagePanel {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 320px);
+  min-height: 360px;
+}
+
+.messageList {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.messageRow {
+  display: flex;
+  flex-direction: column;
+  max-width: 70%;
+}
+
+.messageRowCustomer {
+  align-items: flex-start;
+  align-self: flex-start;
+}
+
+.messageRowAi {
+  align-items: flex-start;
+  align-self: flex-start;
+}
+
+.messageRowOperator {
+  align-items: flex-end;
+  align-self: flex-end;
+}
+
+.messageMeta {
+  font-size: 11px;
+  color: var(--color-text-muted);
+  margin-bottom: 4px;
+}
+
+.bubble {
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-size: 14px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.bubbleCustomer {
+  background: #eef0ef;
+  color: var(--color-text);
+  border-bottom-left-radius: 2px;
+}
+
+.bubbleAi {
+  background: #e6eef8;
+  color: #1c3a5e;
+  border-bottom-left-radius: 2px;
+}
+
+.bubbleOperator {
+  background: var(--botanica-green);
+  color: #fff;
+  border-bottom-right-radius: 2px;
+}
+
+.empty {
+  padding: 40px 16px;
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: 14px;
+}
+
+.replyForm {
+  border-top: 1px solid var(--color-border);
+  padding: 14px 16px;
+  display: flex;
+  gap: 10px;
+  align-items: flex-end;
+}
+
+.textarea {
+  flex: 1;
+  resize: none;
+  min-height: 44px;
+  max-height: 160px;
+  padding: 10px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  font-size: 14px;
+  color: var(--color-text);
+}
+
+.textarea:focus {
+  outline: 2px solid var(--botanica-green);
+  outline-offset: -1px;
+  border-color: var(--botanica-green);
+}
+
+.sendButton {
+  padding: 11px 20px;
+  border: none;
+  border-radius: 8px;
+  background: var(--botanica-green);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.sendButton:hover {
+  background: var(--botanica-green-dark);
+}
+
+.sendButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.closedNote {
+  padding: 14px 16px;
+  border-top: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  font-size: 13px;
+  text-align: center;
+}
+
+.muted {
+  color: var(--color-text-muted);
+}

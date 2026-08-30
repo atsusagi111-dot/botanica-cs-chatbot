@@ -1,0 +1,66 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 24px;
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.brand {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.brandMark {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--botanica-green);
+  letter-spacing: 0.04em;
+}
+
+.brandSub {
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.operatorName {
+  font-size: 13px;
+  color: var(--color-text);
+}
+
+.logoutButton {
+  padding: 7px 14px;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.logoutButton:hover {
+  background: var(--color-bg);
+}
+
+.logoutButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.main {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 24px;
+}
