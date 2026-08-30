@@ -24,13 +24,18 @@
 // ============================================================
 
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
+// 型のみのimportは deploy 時にDenoのトランスパイラで完全に消去されるため安全（実行時にファイル解決されない）。
+// 値（配列・関数など）を外部ディレクトリから import するのは Supabase Edge Functions のバンドル対象外に
+// なるリスクがあるため行わず、必要な値はこのファイル内に直接定義する。
 import type {
   Category,
   ConversationStatus,
   EscalationReason,
   Message,
 } from "../../../packages/shared/src/types.ts";
-import { CATEGORY_LIST } from "../../../packages/shared/src/constants.ts";
+
+// packages/shared/src/constants.ts の CATEGORY_LIST と同一の値を保つこと
+const CATEGORY_LIST = ["在庫", "配送", "返品", "商品", "その他"] as const;
 
 // ------------------------------------------------------------
 // 固定文言（決定論的分岐で使用。OpenAIを呼ばずに返す固定応答）
