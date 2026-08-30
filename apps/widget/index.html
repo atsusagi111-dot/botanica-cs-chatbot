@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ボタニカ | 植物由来のやさしいスキンケア（ウィジェット確認用デモ）</title>
+    <style>
+      :root {
+        --demo-green: #6b8f71;
+        --demo-green-dark: #4f6b54;
+        --demo-beige: #f7f3ea;
+        --demo-beige-dark: #ece4d3;
+        --demo-text: #3a382f;
+        --demo-text-muted: #7a7666;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family:
+          "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo,
+          -apple-system, BlinkMacSystemFont, sans-serif;
+        color: var(--demo-text);
+        background: var(--demo-beige);
+      }
+
+      .demo-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 32px;
+        background: #ffffff;
+        border-bottom: 1px solid var(--demo-beige-dark);
+      }
+
+      .demo-header__brand {
+        font-size: 20px;
+        font-weight: 700;
+        color: var(--demo-green-dark);
+        letter-spacing: 0.05em;
+      }
+
+      .demo-header__nav {
+        display: flex;
+        gap: 24px;
+        font-size: 14px;
+        color: var(--demo-text-muted);
+      }
+
+      .demo-hero {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        padding: 96px 24px 80px;
+        background: linear-gradient(180deg, #eef3ea 0%, var(--demo-beige) 100%);
+      }
+
+      .demo-hero__eyebrow {
+        font-size: 13px;
+        letter-spacing: 0.15em;
+        color: var(--demo-green);
+        font-weight: 700;
+        margin-bottom: 16px;
+      }
+
+      .demo-hero h1 {
+        font-size: 40px;
+        margin: 0 0 16px;
+        color: var(--demo-green-dark);
+      }
+
+      .demo-hero p {
+        max-width: 480px;
+        line-height: 1.9;
+        color: var(--demo-text-muted);
+        font-size: 15px;
+      }
+
+      .demo-products {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 24px;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 24px 96px;
+      }
+
+      .demo-card {
+        background: #ffffff;
+        border: 1px solid var(--demo-beige-dark);
+        border-radius: 16px;
+        padding: 24px;
+        text-align: center;
+      }
+
+      .demo-card__icon {
+        font-size: 32px;
+        margin-bottom: 12px;
+      }
+
+      .demo-card h3 {
+        margin: 0 0 8px;
+        font-size: 16px;
+        color: var(--demo-green-dark);
+      }
+
+      .demo-card p {
+        margin: 0;
+        font-size: 13px;
+        line-height: 1.7;
+        color: var(--demo-text-muted);
+      }
+
+      .demo-note {
+        max-width: 640px;
+        margin: 0 auto 96px;
+        padding: 16px 20px;
+        background: #ffffff;
+        border: 1px dashed var(--demo-green);
+        border-radius: 12px;
+        font-size: 13px;
+        line-height: 1.8;
+        color: var(--demo-text);
+        text-align: center;
+      }
+
+      .demo-footer {
+        padding: 24px;
+        text-align: center;
+        font-size: 12px;
+        color: var(--demo-text-muted);
+      }
+    </style>
+  </head>
+  <body>
+    <header class="demo-header">
+      <div class="demo-header__brand">BOTANICA</div>
+      <nav class="demo-header__nav">
+        <span>商品一覧</span>
+        <span>ブランドストーリー</span>
+        <span>よくあるご質問</span>
+      </nav>
+    </header>
+
+    <section class="demo-hero">
+      <div class="demo-hero__eyebrow">NATURAL &amp; SENSITIVE SKIN CARE</div>
+      <h1>肌にも、地球にも、やさしく。</h1>
+      <p>
+        ボタニカは、敏感肌の方にも安心してお使いいただける植物由来スキンケアブランドです。
+        <br />
+        このページはチャットウィジェットの動作確認用デモページです。
+      </p>
+    </section>
+
+    <div class="demo-products">
+      <div class="demo-card">
+        <div class="demo-card__icon">🌿</div>
+        <h3>ボタニカル化粧水</h3>
+        <p>15種の植物エキス配合。うるおいで満たすやさしい使い心地。</p>
+      </div>
+      <div class="demo-card">
+        <div class="demo-card__icon">🌱</div>
+        <h3>リペア美容液</h3>
+        <p>乾燥や揺らぎが気になる肌に。低刺激処方でデイリーケアに。</p>
+      </div>
+      <div class="demo-card">
+        <div class="demo-card__icon">🍃</div>
+        <h3>モイストクリーム</h3>
+        <p>ふっくらとした質感が続く、しっとりタイプの仕上げクリーム。</p>
+      </div>
+    </div>
+
+    <div class="demo-note">
+      画面右下のアイコンからチャットを開き、ご質問を入力してご確認ください。<br />
+      （<code>case4-test-conversations.csv</code> のシナリオで動作確認する想定のデモページです）
+    </div>
+
+    <footer class="demo-footer">&copy; 2026 BOTANICA（デモ用ダミーページ）</footer>
+
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
