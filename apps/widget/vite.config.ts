@@ -10,9 +10,14 @@ import { resolve } from "node:path";
 // embedモードでは React/ReactDOM ごと1本のIIFEファイルにバンドルし、
 // CSSも vite-plugin-css-injected-by-js で同じJSファイルの中に注入する
 // （埋め込み先サイトは <script src="widget.iife.js"></script> の1行だけで動かせるようにするため）。
+// リポジトリ直下の .env を読み込む（モノレポ全体で環境変数ファイルを1つに統一するため）。
+// 指定しない場合Viteはこのファイルのあるディレクトリ(apps/widget)の.envしか見てくれない。
+const REPO_ROOT = resolve(__dirname, "../..");
+
 export default defineConfig(({ mode }) => {
   if (mode === "embed") {
     return {
+      envDir: REPO_ROOT,
       plugins: [react(), cssInjectedByJsPlugin()],
       build: {
         outDir: "dist-embed",
@@ -29,6 +34,7 @@ export default defineConfig(({ mode }) => {
   }
 
   return {
+    envDir: REPO_ROOT,
     plugins: [react()],
     build: {
       outDir: "dist",
