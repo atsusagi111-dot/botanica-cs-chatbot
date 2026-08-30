@@ -1,0 +1,156 @@
+.pageHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.pageTitle {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.tabs {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.tab {
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text-muted);
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.tab:hover {
+  background: var(--color-bg);
+}
+
+.tabActive {
+  background: var(--botanica-green);
+  border-color: var(--botanica-green);
+  color: #fff;
+}
+
+.tabWaiting {
+  border-color: var(--color-danger);
+  color: var(--color-danger);
+}
+
+.tabWaiting.tabActive {
+  background: var(--color-danger);
+  border-color: var(--color-danger);
+  color: #fff;
+}
+
+.tabCount {
+  display: inline-block;
+  margin-left: 6px;
+  font-weight: 700;
+}
+
+.tableWrap {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.table th {
+  text-align: left;
+  padding: 10px 16px;
+  background: var(--color-bg);
+  color: var(--color-text-muted);
+  font-weight: 600;
+  border-bottom: 1px solid var(--color-border);
+  white-space: nowrap;
+}
+
+.table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--color-border);
+  vertical-align: middle;
+}
+
+.row {
+  cursor: pointer;
+}
+
+.row:hover {
+  background: var(--color-bg);
+}
+
+.rowWaiting {
+  background: var(--color-warning-bg);
+}
+
+.rowWaiting:hover {
+  background: #fbe6bf;
+}
+
+.sessionId {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  color: var(--color-text-muted);
+}
+
+.badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.statusAiHandling {
+  background: #e6eef8;
+  color: #2c5aa0;
+}
+
+.statusWaitingOperator {
+  background: var(--color-warning-bg);
+  color: var(--color-warning-text);
+}
+
+.statusOperatorHandling {
+  background: var(--botanica-green-light);
+  color: var(--botanica-green-dark);
+}
+
+.statusClosed {
+  background: #eceeec;
+  color: var(--color-text-muted);
+}
+
+.escalationBadge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  background: var(--color-danger-bg);
+  color: var(--color-danger);
+  white-space: nowrap;
+}
+
+.empty {
+  padding: 48px 16px;
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: 14px;
+}
+
+.muted {
+  color: var(--color-text-muted);
+}
