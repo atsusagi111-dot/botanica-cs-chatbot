@@ -9,8 +9,8 @@
   "scripts": {
     "dev:widget": "npm run dev -w apps/widget",
     "dev:admin": "npm run dev -w apps/admin",
-    "build": "npm run build -ws --if-present",
-    "typecheck": "npm run typecheck -ws --if-present",
+    "build": "npm run build --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present",
     "seed:faqs": "node scripts/seed-faqs.mjs"
   },
   "devDependencies": {
